@@ -13,6 +13,7 @@
 @property(nonatomic,strong) UIView *redView;
 @property(nonatomic,strong) UIView *yellowView;
 @property(nonatomic,strong) UIView *blueView;
+@property(nonatomic,strong) UIButton *actionButton;
 @end
 
 @implementation ViewController
@@ -36,19 +37,34 @@
     [self.redView addSubview:self.yellowView];
     [self.redView addSubview:self.blueView];
     
+    
     [self.yellowView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.redView).mas_offset(@45);
-        make.bottom.equalTo(self.redView).mas_offset(@-45);
-        make.height.equalTo(@80);
-        make.width.equalTo(@80);
+        make.top.equalTo(self.redView).mas_offset(@30);
+        make.left.equalTo(self.redView).mas_offset(@30);
+        make.right.equalTo(self.redView).mas_offset(@-30);
+        make.height.equalTo(@50);
+    }];
+    [self.blueView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.yellowView.mas_bottom).mas_offset(@30);
+        make.right.equalTo(self.redView).mas_offset(@-30);
+        make.height.equalTo(@50);
+        make.width.equalTo(self.yellowView).multipliedBy(0.5);
     }];
     
-    [self.blueView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self.redView).mas_offset(@-40);
-        make.bottom.equalTo(self.redView).mas_offset(@-45);
-        make.height.equalTo(self.yellowView);
-        make.width.equalTo(self.yellowView);
-    }];
+    
+//    [self.yellowView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.equalTo(self.redView).mas_offset(@45);
+//        make.bottom.equalTo(self.redView).mas_offset(@-45);
+//        make.height.equalTo(@80);
+//        make.width.equalTo(@80);
+//    }];
+//
+//    [self.blueView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.right.equalTo(self.redView).mas_offset(@-40);
+//        make.bottom.equalTo(self.redView).mas_offset(@-45);
+//        make.height.equalTo(self.yellowView);
+//        make.width.equalTo(self.yellowView);
+//    }];
    
     
 }

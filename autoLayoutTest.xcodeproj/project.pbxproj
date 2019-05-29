@@ -13,9 +13,12 @@
 		4A1481CC229D8195001AB4C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A1481CB229D8195001AB4C7 /* Assets.xcassets */; };
 		4A1481CF229D8195001AB4C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A1481CD229D8195001AB4C7 /* LaunchScreen.storyboard */; };
 		4A1481D2229D8195001AB4C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1481D1229D8195001AB4C7 /* main.m */; };
+		4AA08B0B229D8B8200078731 /* BKTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AA08B0A229D8B8200078731 /* BKTableViewController.m */; };
+		C692319E557871F04A17F728 /* Pods_autoLayoutTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7460B8180027366E5B180E /* Pods_autoLayoutTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		41BE8AC29F4AE4ADF5AD9395 /* Pods-autoLayoutTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-autoLayoutTest.release.xcconfig"; path = "Target Support Files/Pods-autoLayoutTest/Pods-autoLayoutTest.release.xcconfig"; sourceTree = "<group>"; };
 		4A1481BF229D8193001AB4C7 /* autoLayoutTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = autoLayoutTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A1481C2229D8193001AB4C7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4A1481C3229D8193001AB4C7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +29,10 @@
 		4A1481CE229D8195001AB4C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A1481D0229D8195001AB4C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A1481D1229D8195001AB4C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4AA08B09229D8B8200078731 /* BKTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BKTableViewController.h; sourceTree = "<group>"; };
+		4AA08B0A229D8B8200078731 /* BKTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BKTableViewController.m; sourceTree = "<group>"; };
+		EC7460B8180027366E5B180E /* Pods_autoLayoutTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_autoLayoutTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F26992071F3B2515CA93091F /* Pods-autoLayoutTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-autoLayoutTest.debug.xcconfig"; path = "Target Support Files/Pods-autoLayoutTest/Pods-autoLayoutTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C692319E557871F04A17F728 /* Pods_autoLayoutTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +52,8 @@
 			children = (
 				4A1481C1229D8193001AB4C7 /* autoLayoutTest */,
 				4A1481C0229D8193001AB4C7 /* Products */,
+				B2C30AC085F874E563E0197E /* Pods */,
+				C1DA2C9537155F167E6AE44B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,8 +77,27 @@
 				4A1481CD229D8195001AB4C7 /* LaunchScreen.storyboard */,
 				4A1481D0229D8195001AB4C7 /* Info.plist */,
 				4A1481D1229D8195001AB4C7 /* main.m */,
+				4AA08B09229D8B8200078731 /* BKTableViewController.h */,
+				4AA08B0A229D8B8200078731 /* BKTableViewController.m */,
 			);
 			path = autoLayoutTest;
+			sourceTree = "<group>";
+		};
+		B2C30AC085F874E563E0197E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F26992071F3B2515CA93091F /* Pods-autoLayoutTest.debug.xcconfig */,
+				41BE8AC29F4AE4ADF5AD9395 /* Pods-autoLayoutTest.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C1DA2C9537155F167E6AE44B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC7460B8180027366E5B180E /* Pods_autoLayoutTest.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A1481D5229D8195001AB4C7 /* Build configuration list for PBXNativeTarget "autoLayoutTest" */;
 			buildPhases = (
+				659D5C3C5793B3EAEA2FFD39 /* [CP] Check Pods Manifest.lock */,
 				4A1481BB229D8193001AB4C7 /* Sources */,
 				4A1481BC229D8193001AB4C7 /* Frameworks */,
 				4A1481BD229D8193001AB4C7 /* Resources */,
+				3E74C468F0A6D35C5BA540DE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,6 +167,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3E74C468F0A6D35C5BA540DE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-autoLayoutTest/Pods-autoLayoutTest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-autoLayoutTest/Pods-autoLayoutTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		659D5C3C5793B3EAEA2FFD39 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-autoLayoutTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4A1481BB229D8193001AB4C7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -143,6 +223,7 @@
 			files = (
 				4A1481C7229D8194001AB4C7 /* ViewController.m in Sources */,
 				4A1481D2229D8195001AB4C7 /* main.m in Sources */,
+				4AA08B0B229D8B8200078731 /* BKTableViewController.m in Sources */,
 				4A1481C4229D8193001AB4C7 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +364,7 @@
 		};
 		4A1481D6229D8195001AB4C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F26992071F3B2515CA93091F /* Pods-autoLayoutTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +382,7 @@
 		};
 		4A1481D7229D8195001AB4C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41BE8AC29F4AE4ADF5AD9395 /* Pods-autoLayoutTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

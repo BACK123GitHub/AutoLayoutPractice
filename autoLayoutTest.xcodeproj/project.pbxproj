@@ -13,6 +13,8 @@
 		4A1481CC229D8195001AB4C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A1481CB229D8195001AB4C7 /* Assets.xcassets */; };
 		4A1481CF229D8195001AB4C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A1481CD229D8195001AB4C7 /* LaunchScreen.storyboard */; };
 		4A1481D2229D8195001AB4C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1481D1229D8195001AB4C7 /* main.m */; };
+		4A49A7E9229E15B100FAF792 /* bkTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A49A7E8229E15B100FAF792 /* bkTableViewCell.m */; };
+		4A49A7EC229E17DA00FAF792 /* bkTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A49A7EB229E17DA00FAF792 /* bkTableModel.m */; };
 		4AA08B0B229D8B8200078731 /* BKTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AA08B0A229D8B8200078731 /* BKTableViewController.m */; };
 		C692319E557871F04A17F728 /* Pods_autoLayoutTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC7460B8180027366E5B180E /* Pods_autoLayoutTest.framework */; };
 /* End PBXBuildFile section */
@@ -29,6 +31,11 @@
 		4A1481CE229D8195001AB4C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A1481D0229D8195001AB4C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A1481D1229D8195001AB4C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4A49A7E7229E15B100FAF792 /* bkTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bkTableViewCell.h; sourceTree = "<group>"; };
+		4A49A7E8229E15B100FAF792 /* bkTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bkTableViewCell.m; sourceTree = "<group>"; };
+		4A49A7EA229E17DA00FAF792 /* bkTableModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bkTableModel.h; sourceTree = "<group>"; };
+		4A49A7EB229E17DA00FAF792 /* bkTableModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bkTableModel.m; sourceTree = "<group>"; };
+		4A49A7ED229E1BCD00FAF792 /* Ourdur.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ourdur.h; sourceTree = "<group>"; };
 		4AA08B09229D8B8200078731 /* BKTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BKTableViewController.h; sourceTree = "<group>"; };
 		4AA08B0A229D8B8200078731 /* BKTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BKTableViewController.m; sourceTree = "<group>"; };
 		EC7460B8180027366E5B180E /* Pods_autoLayoutTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_autoLayoutTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +86,11 @@
 				4A1481D1229D8195001AB4C7 /* main.m */,
 				4AA08B09229D8B8200078731 /* BKTableViewController.h */,
 				4AA08B0A229D8B8200078731 /* BKTableViewController.m */,
+				4A49A7E7229E15B100FAF792 /* bkTableViewCell.h */,
+				4A49A7E8229E15B100FAF792 /* bkTableViewCell.m */,
+				4A49A7EA229E17DA00FAF792 /* bkTableModel.h */,
+				4A49A7EB229E17DA00FAF792 /* bkTableModel.m */,
+				4A49A7ED229E1BCD00FAF792 /* Ourdur.h */,
 			);
 			path = autoLayoutTest;
 			sourceTree = "<group>";
@@ -224,7 +236,9 @@
 				4A1481C7229D8194001AB4C7 /* ViewController.m in Sources */,
 				4A1481D2229D8195001AB4C7 /* main.m in Sources */,
 				4AA08B0B229D8B8200078731 /* BKTableViewController.m in Sources */,
+				4A49A7EC229E17DA00FAF792 /* bkTableModel.m in Sources */,
 				4A1481C4229D8193001AB4C7 /* AppDelegate.m in Sources */,
+				4A49A7E9229E15B100FAF792 /* bkTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

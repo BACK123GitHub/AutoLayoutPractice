@@ -7,6 +7,10 @@
 //
 
 #import "BKTableViewController.h"
+#import "bkTableViewCell.h"
+#import "bkTableModel.h"
+#import "Masonry.h"
+#import "Ourdur.h"
 
 @interface BKTableViewController ()
 
@@ -16,6 +20,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.dataList = [NSMutableArray array];
+    for(int i=0;i<10;i++)
+    {
+        bkTableModel* model = [[bkTableModel alloc]init];
+        model.title= [NSString stringWithFormat:@"title %d",i];
+        model.text = @"this is a text";
+        [self.dataList addObject:model];
+    }
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -24,17 +36,37 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+-(void)tableViewConstraint
+{
+    [self.bktableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
+
     
-    return 0;
+    return self.dataList.count;
+}
+
+#pragma mark - Table view delegate
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    bkTableViewCell* cell = [self.bktableView dequeueReusableCellWithIdentifier:bkCell];
+    bkTableModel* model = self.dataList[indexPath.row];
+    cell.detailTextLabel.text=model.title;
+//    if(cell==nil)
+//    {
+//        cell = [[bkTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:bkCell];
+//    }
+    return cell;
 }
 
 - (UITableView *)tableView
@@ -45,7 +77,9 @@
         _bktableView.delegate=self;
         _bktableView.dataSource=self;
         //设置tableView自动高度
-        
+        _bktableView.rowHeight=UITableViewAutomaticDimension;
+        [_bktableView registerClass:[bkTableViewCell class] forCellReuseIdentifier:bkCell];
+        [self.view addSubview:_bktableView];
     }
     return _bktableView;
 }

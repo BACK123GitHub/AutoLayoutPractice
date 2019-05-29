@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface BKTableViewController : UITableViewController
 
 @property(nonatomic,strong) UITableView* bktableView;
+@property(nonatomic,strong) NSMutableArray *dataList;
 
 @end
 

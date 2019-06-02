@@ -8,19 +8,35 @@
 
 #import "ViewController.h"
 #import "bkCollectionView.h"
+#import "bkTableViewCell.h"
 #import "Masonry.h"
 
 @interface ViewController ()
-;
+
 @property(nonatomic,strong) bkCollectionView *collTL;
 @property(nonatomic,strong) bkCollectionView *collTR;
 @property(nonatomic,strong) bkCollectionView *collBL;
 @property(nonatomic,strong) bkCollectionView *collBR;
 @property(nonatomic,strong) UIView *yellowView;
+@property(nonatomic,strong) bkTableViewCell* cell;
 
 @end
 
 @implementation ViewController
+
+- (bkTableViewCell *)cell
+{
+    if(_cell==nil)
+    {
+        _cell = [[bkTableViewCell alloc]init];
+        _cell.imageView.image=[UIImage imageNamed:@"test"];
+        _cell.textLabel.text=@"姓名";
+        _cell.detailTextLabel.text=@"我今天出去玩了";
+        [self.view addSubview:_cell];
+    }
+    return _cell;
+}
+
 
 - (bkCollectionView *)collTL
 {
@@ -80,42 +96,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    [self.collTL mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.height.equalTo(self.view.mas_height).multipliedBy(0.5);
-        make.width.equalTo(self.view.mas_width).multipliedBy(0.5);
-        make.top.equalTo(self.view.mas_top);
-        make.left.equalTo(self.view.mas_left);
-    }];
-    [self.collBL mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.equalTo(self.collTL);
-        make.bottom.equalTo(self.view.mas_bottom);
-        make.left.equalTo(self.view.mas_left);
-    }];
-    
-    [self.yellowView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.equalTo(self.collTL);
-        make.top.equalTo(self.view.mas_top);
-        make.right.equalTo(self.view.mas_right);
-    }];
-    [self.collTR mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.equalTo(self.collTL);
-        make.top.equalTo(self.view.mas_top);
-        make.right.equalTo(self.view.mas_right);
-    }];
-    
-    [self.collBR mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.equalTo(self.collTL);
-        make.bottom.equalTo(self.view.mas_bottom);
-        make.right.equalTo(self.view.mas_right);
+    [self.cell mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.equalTo(@350);
+        make.height.equalTo(@200);
+        make.left.equalTo(self.view).with.offset(20);
+        make.top.equalTo(self.view.mas_top).with.offset(20);
     }];
 }
 
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    NSLog(@"collTL address: %@",_collTL);
-    NSLog(@"collBL address: %@",_collBL);
-    NSLog(@"collTR address: %@",_collTR);
-}
 
 @end

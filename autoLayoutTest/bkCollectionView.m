@@ -17,6 +17,18 @@
     // Drawing code
 }
 */
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self=[super initWithFrame:frame];
+    if(self)
+    {
+        [self addSubview:self.imageV];
+        [self addSubview:self.text];
+    }
+    return self;
+}
+
+
 
 - (UIImageView *)imageV
 {
@@ -24,7 +36,7 @@
     {
         _imageV=[[UIImageView alloc]init];
         _imageV.image=[UIImage imageNamed:@"test"];
-        [self addSubview:_imageV];
+       // [self addSubview:_imageV];
     }
     return _imageV;
 }
@@ -35,10 +47,12 @@
     {
         _text=[[UILabel alloc]init];
         _text.text=@"账号";
-        [self addSubview:_text];
+        _text.textAlignment=NSTextAlignmentCenter;
+        //[self addSubview:_text];
     }
     return _text;
 }
+
 
 
 
@@ -56,5 +70,7 @@
         make.height.equalTo(@30);
     }];
 }
+
+
 
 @end
